@@ -134,11 +134,11 @@ public:
 - Time complexity: O(N)
 - Space complexity: O(1)
 
-To find the surviver in the <code>n<sup>th</sup></code> game can simply transform into the question of finding the next wordsman in the <code>n-1<sup>th</sup></code> game.
-
 #### C++ (recursive solution)
 - General term: `W(n, k) = ( W(n-1, k) + k ) mod n` (index base: 0)
 - Base term: `W(1, k) = 0` (index base: 0)
+- To find the surviver in the <code>n<sup>th</sup></code> game can simply transform into the question of finding the next wordsman in the <code>n-1<sup>th</sup></code> game.
+
 ```cpp
 class Solution {
 public:
