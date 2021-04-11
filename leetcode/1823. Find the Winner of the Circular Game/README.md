@@ -1,10 +1,10 @@
 # [1823. Find the Winner of the Circular Game](https://leetcode.com/problems/find-the-winner-of-the-circular-game/)
 
-There are `n` friends that are playing a game. The friends are sitting in a circle and are numbered from 1 to n in **clockwise order**. More formally, moving clockwise from the ith friend brings you to the `(i+1)^th^` friend for `1 <= i < n`, and moving clockwise from the nth friend brings you to the 1st friend.
+There are `n` friends that are playing a game. The friends are sitting in a circle and are numbered from 1 to n in **clockwise order**. More formally, moving clockwise from the ith friend brings you to the <code>(i+1)<sup>th</sup></code> friend for `1 <= i < n`, and moving clockwise from the nth friend brings you to the 1st friend.
 
 The rules of the game are as follows:
 
-1. **Start** at the `1^st^` friend.
+1. **Start** at the <code>1<sup>st</sup></code> friend.
 1. Count the next `k` friends in the clockwise direction **including** the friend you started at. The counting wraps around the circle and may count some friends more than once.
 1. The last friend you counted leaves the circle and loses the game.
 1. If there is still more than one friend in the circle, go back to step `2` starting from the friend **immediately clockwise** of the friend who just lost and repeat.
