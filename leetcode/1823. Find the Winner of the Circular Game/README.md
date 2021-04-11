@@ -25,14 +25,20 @@ Given the number of friends, `n`, and an integer `k`, *return the winner of the 
 8) Count 2 friends clockwise, which are friends 3 and 5.
 9) Friend 5 leaves the circle. Only friend 3 is left, so they are the winner.</pre>
 
+![example1](./example1.png)
+
 <p><strong>Example 2:</strong></p>
 <pre><strong>Input:</strong> n = 6, k = 5
 <strong>Output:</strong> 1
 <strong>Explanation:</strong> The friends leave in this order: 5, 4, 6, 2, 3. The winner is friend 1.
 </pre>
 
-## My Solution
+## My Solutions
 ### Solution 1. Brute Force (Vector)
+- Time complexity: O(N)
+- Space complexity: O(N)
+
+#### C++
 ```cpp
 class Solution {
 public:
@@ -51,6 +57,75 @@ public:
         }
         
         return friends[0];
+    }
+};
+```
+
+### Solution 2. Brute Force (Circular Linked List)
+- Time complexity: O(N)
+- Space complexity: O(N)
+
+#### C++
+```C++
+struct MyListNode {
+    int val;
+    MyListNode *next;
+    MyListNode() : val(0), next(NULL) {}
+    MyListNode(int x) : val(x), next(NULL) {}
+};
+
+
+class CircularList {
+    int n;
+    int k;
+    MyListNode* head;
+    MyListNode* tail;
+    
+public:
+    CircularList() : n(0), k(0), head(NULL) {}
+    CircularList(int N, int K) : n(N), k(K) {
+        init();
+    }
+    void init() {
+        MyListNode* res = new MyListNode();
+        MyListNode* curr = res;
+        for (int i = 1; i <= n; ++i){
+            curr->next = new MyListNode(i);
+            curr = curr->next;
+        }
+        head = res->next;
+        curr->next = res->next;
+        tail = curr;
+    }
+    
+    MyListNode* getHead(){ return head; }
+    MyListNode* getTail(){ return tail; }
+    
+    void kill(){
+        int cnt = n;
+        MyListNode* start = tail;
+        while (cnt > 1){
+            MyListNode* curr = start;
+            for (int i = 1; i < k; ++i)
+                curr = curr->next;
+            curr->next = curr->next->next;
+            cnt--;
+            start = curr;
+        }
+        head = start;
+        tail = start;
+    }
+};
+
+
+class Solution {
+public:
+    int findTheWinner(int n, int k) {
+        CircularList cl(n, k);
+        MyListNode* curr = cl.getHead();
+        
+        cl.kill();
+        return cl.getHead()->val;
     }
 };
 ```
