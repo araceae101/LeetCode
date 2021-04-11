@@ -129,3 +129,21 @@ public:
     }
 };
 ```
+
+### Solution 3. Josephus problem
+- Time complexity: O(N)
+- Space complexity: O(1)
+
+To find the surviver in the <code>n<sup>th</sup></code> game can simply transform into the question of finding the next wordsman in the <code>n-1<sup>th</sup></code> game.
+
+#### C++ (recursive solution)
+- General term: `W(n, k) = ( W(n-1, k) + k ) mod n` (index base: 0)
+- Base term: `W(1, k) = 0` (index base: 0)
+```cpp
+class Solution {
+public:
+    int findTheWinner(int n, int k) {
+        return n == 1 ? 1 : (findTheWinner(n-1, k) + k-1) % n + 1;
+    }
+};
+```
