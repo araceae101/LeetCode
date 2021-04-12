@@ -83,9 +83,20 @@ class CircularList {
     
 public:
     CircularList() : n(0), k(0), head(NULL) {}
+    ~CircularList() {
+        tail->next = NULL;
+        tail = NULL;
+        while (head){
+            MyListNode* curr = head;
+            head = head->next;
+            delete curr;
+        }
+    }
+    
     CircularList(int N, int K) : n(N), k(K) {
         init();
     }
+    
     void init() {
         MyListNode* res = new MyListNode();
         MyListNode* curr = res;
@@ -106,9 +117,13 @@ public:
         MyListNode* start = tail;
         while (cnt > 1){
             MyListNode* curr = start;
-            for (int i = 1; i < k; ++i)
-                curr = curr->next;
+            for (int i = 1; i < k; ++i) curr = curr->next;
+            
+            MyListNode* dead = curr->next;
+            
             curr->next = curr->next->next;
+            
+            delete dead;
             cnt--;
             start = curr;
         }
