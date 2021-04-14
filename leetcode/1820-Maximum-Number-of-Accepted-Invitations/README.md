@@ -52,7 +52,7 @@ Explanation:</strong> The invitations are sent as follows:
 #### C++
 ```cpp
 class Solution {
-    bool bpm(vector<vector<int>>& grid, vector<int>& match, vector<int>& visited, int u){
+    bool bpm(vector<vector<int>>& grid, vector<int>& match, vector<bool>& visited, int u){
         int m = grid.size(), n = grid[0].size();
         
         for (int v = 0; v < n; ++v){
@@ -79,7 +79,7 @@ public:
         int res = 0;
         
         for (int u = 0; u < m; ++u){
-            vector<int> visited(n, 0);
+            vector<bool> visited(n, false);
             if (bpm(grid, match, visited, u))
                 res++;
         }
