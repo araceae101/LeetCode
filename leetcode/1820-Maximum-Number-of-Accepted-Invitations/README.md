@@ -55,12 +55,18 @@ class Solution {
         int m = grid.size(), n = grid[0].size();
         
         for (int v = 0; v < n; ++v){
-            if (grid[u][v] && !visited[v]){
-                visited[v] = true;
-                if (match[v] < 0 || bpm(grid, match, visited, match[v])){
-                    match[v] = u;
-                    return true;
-                }
+            // if the girl-v has checked or was not invited by the boy-u,
+            // then continue to check the next girl
+            if (visited[v] || !grid[u][v])
+                continue;
+
+            visited[v] = true;
+            // if we have not yet found the partner for girl-v, 
+            // or the girl-v already has the partner but we can find another partner for her,
+            // then update the match list
+            if (match[v] < 0 || bpm(grid, match, visited, match[v])){
+                match[v] = u;
+                return true;
             }
         }
         return false;
