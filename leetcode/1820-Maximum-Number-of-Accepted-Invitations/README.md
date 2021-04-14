@@ -45,6 +45,7 @@ Explanation:</strong> The invitations are sent as follows:
 
 ## My Solutions
 ### Solution 1. Hungrian Algorithm
+- Description: Hungrian Algorithm uses DFS to recursively update the best pairing combination
 - Time complexity: O(MNN)
 - Space complexity: O(N)
 
