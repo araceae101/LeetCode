@@ -48,9 +48,12 @@
 ## My Solutions
 
 ### Solution 1. DP
+#### C++
 ```cpp
 // Problem: https://leetcode.com/problems/01-matrix/
 // Author: Araceae
+// Date: 2021/4/17
+
 // Solution: DP solution
 // DP from 4 quadrant and to ask the neighbors in front
 // of their nearest zero distance and plus 1: 
@@ -60,6 +63,10 @@
 //     (4) Lower Left  --to--> Upper Right
 // Time Complexity: O(MN)
 // Space Complexity: O(MN)
+
+// Performance: 
+// Runtime: 68 ms, faster than 66.03% of C++ online submissions
+// Memory Usage: 26 MB, less than 92.59% of C++ online submissions
 
 class Solution {
 public:
