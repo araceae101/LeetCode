@@ -13,8 +13,8 @@ func MaximumInvitations(grid [][]int) int {
 	res := 0
 
 	for u := 0; u < m; u++ {
-		visited := make([]bool, m)
-		for i := 0; i < m; i++ {
+		visited := make([]bool, n)
+		for i := 0; i < n; i++ {
 			visited[i] = false
 		}
 		if bmp(grid, visited, match, u) {
