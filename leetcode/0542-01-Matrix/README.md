@@ -169,3 +169,67 @@ public:
     }
 };
 ```
+
+### Solution 2. BFS
+#### C++
+```cpp
+// Problem: https://leetcode.com/problems/01-matrix/
+// Author: Araceae
+// Date: 2021/4/17
+
+// Solution: BFS solution
+// Like Ripples, start from Zero-element and tell how they are close to Zero to their 4 neighbors
+// and the 4 neighbors continue to tell their neighbors ... until all the elements all get the signal.
+
+// Time Complexity: O(MN)
+// Space Complexity: O(MN)
+
+// Performance:
+// Runtime: 68 ms, faster than 66.58% of C++ online submissions for 01 Matrix.
+// Memory Usage: 28.6 MB, less than 71.92% of C++ online submissions for 01 Matrix.
+
+class Solution {
+    vector<pair<int, int>> dir{ {-1, 0}, {1, 0}, {0, -1}, {0, 1} };
+public:
+    vector<vector<int>> updateMatrix(vector<vector<int>>& matrix) {
+        int m = matrix.size(); if (m < 1)  return {{}};
+        int n = matrix[0].size(); if (n < 1)  return {{}};
+        
+        queue<pair<int, int>> q;
+        
+        // start from the Zero-element
+        // so add the index of the Zero-element to the queue
+        // and the other non-Zero element change to value -1 
+        // to mark the element which is waiting to be checked
+        for (int i = 0; i < m; ++i){
+            for (int j = 0; j < n; ++j){
+                if (matrix[i][j])   matrix[i][j] = -1;
+                else    q.push({i, j});
+            }
+        }
+        
+        while (!q.empty()){
+            int i = q.front().first;
+            int j = q.front().second;
+            q.pop();
+            
+            for (auto &d : dir){
+                int x = i + d.first;
+                int y = j + d.second;
+
+                if (x < 0 || y < 0 || x >= m || y >= n) continue;
+
+                // if there are neighbors and have not yet been checked,
+                // tell them the distance
+                // and this element add to queue to be the next messenger
+                if (matrix[x][y] == -1){
+                    matrix[x][y] = matrix[i][j] + 1;
+                    q.push({x, y});
+                }
+            }
+        }
+
+        return matrix;
+    }
+};
+```
