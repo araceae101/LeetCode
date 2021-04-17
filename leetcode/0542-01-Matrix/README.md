@@ -48,7 +48,7 @@
 ## My Solutions
 
 ### Solution 1. DP
-#### C++
+#### C++ (version-1)
 ```cpp
 // Problem: https://leetcode.com/problems/01-matrix/
 // Author: Araceae
@@ -110,6 +110,62 @@ public:
         }
         
         return res;
+    }
+};
+```
+#### C++ (version-2)
+```cpp
+// Problem: https://leetcode.com/problems/01-matrix/
+// Author: Araceae
+// Date: 2021/4/17
+
+// Solution: DP solution
+// DP only need 2 sweeps:
+//     (1) front (0, 0)     --to--> back  (m-1, n-1)
+//         and ask the neighbors on the ABOVE and LEFT
+//     (2) back  (m-1, n-1) --to--> front (0, 0)
+//         and ask the neighbors on the BELOW and RIGHT
+// Time Complexity: O(MN)
+// Space Complexity: O(1)
+
+// Performance: 
+// Runtime: 60 ms, faster than 86.29% of C++ online submissions for 01 Matrix.
+// Memory Usage: 25.9 MB, less than 97.84% of C++ online submissions for 01 Matrix.
+
+class Solution {
+public:
+    vector<vector<int>> updateMatrix(vector<vector<int>>& matrix) {
+        int m = matrix.size(); if (m < 1)  return {{}};
+        int n = matrix[0].size(); if (n < 1)  return {{}};
+        
+        // in-place solution
+        for (int i = 0; i < m; ++i){
+            for (int j = 0; j < n; ++j){
+                if (matrix[i][j])   matrix[i][j] = INT_MAX;
+            }
+        }
+        
+        // chech from front (0, 0)  --to-->  back (m-1, n-1)
+        for (int i = 0; i < m; ++i){
+            for (int j = 0; j < n; ++j){
+                if (matrix[i][j] != 0){
+                    if (i-1 >= 0 && matrix[i][j] > matrix[i-1][j])  matrix[i][j] = matrix[i-1][j] + 1;
+                    if (j-1 >= 0 && matrix[i][j] > matrix[i][j-1])  matrix[i][j] = matrix[i][j-1] + 1;
+                }
+            }
+        }
+        
+        // check from back (m-1, n-1)  --to-->  front (0, 0)
+        for (int i = m-1; i >= 0; --i){
+            for (int j = n-1; j >= 0; --j){
+                if (matrix[i][j] != 0){
+                    if (i+1 < m && matrix[i][j] > matrix[i+1][j])   matrix[i][j] = matrix[i+1][j] + 1;
+                    if (j+1 < n && matrix[i][j] > matrix[i][j+1])   matrix[i][j] = matrix[i][j+1] + 1;
+                }
+            }
+        }
+        
+        return matrix;
     }
 };
 ```
