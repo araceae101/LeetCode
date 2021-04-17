@@ -12,7 +12,7 @@ import "math"
 //     (2) back  (m-1, n-1) --to--> front (0, 0)
 
 // Time Complexity: O(MN)
-// Space Complexity: O(MN)
+// Space Complexity: O(1)
 
 // Runtime: 48 ms, faster than 98.32% of Go online submissions for 01 Matrix.
 // Memory Usage: 6.5 MB, less than 96.64% of Go online submissions for 01 Matrix.
@@ -29,6 +29,7 @@ func UpdateMatrix(matrix [][]int) [][]int {
 		return [][]int{{}}
 	}
 
+	// in-place solution
 	for i := 0; i < m; i++ {
 		for j := 0; j < n; j++ {
 			if matrix[i][j] == 1 {
@@ -37,6 +38,7 @@ func UpdateMatrix(matrix [][]int) [][]int {
 		}
 	}
 
+	// chech from front (0, 0)  --to-->  back (m-1, n-1)
 	for i := 0; i < m; i++ {
 		for j := 0; j < n; j++ {
 			if matrix[i][j] != 0 {
@@ -50,6 +52,7 @@ func UpdateMatrix(matrix [][]int) [][]int {
 		}
 	}
 
+	// check from back (m-1, n-1)  --to-->  front (0, 0)
 	for i := m - 1; i >= 0; i-- {
 		for j := n - 1; j >= 0; j-- {
 			if matrix[i][j] != 0 {
