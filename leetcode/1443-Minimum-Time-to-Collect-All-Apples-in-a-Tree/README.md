@@ -48,8 +48,7 @@
 ### Solution 1. BFS
 - Time complexity: O(N)
 - Space complexity: O(N)
-To count how many nodes will pass through (`totalNode`), and the result is `(totalNode - 1) * 2`.
-I used hash map to store the parent node index, and then used bfs method to find all the parents and mark as needed in the original vector hasApple.
+- Idea: To count how many nodes will pass through (`totalNode`), and the result is `(totalNode - 1) * 2`. I used hash map to store the parent node index, and then used bfs method to find all the parents and mark as needed in the original vector hasApple.
 > Note that the edges `(i, j)` only means the connection between two nodes `i, j`, but NOT means `i` is a parent node with a child node `j` .
 ```
 For example, the following edges input is valid:
@@ -60,7 +59,7 @@ For example, the following edges input is valid:
   /
  3
 ```
-#### C++
+#### C++ Code
 ```cpp
 // Problem: https://leetcode.com/problems/minimum-time-to-collect-all-apples-in-a-tree/
 // Author: Araceae
@@ -96,7 +95,7 @@ public:
             if (currIdx != 0){
                 int nextIdx = nodeParent[currIdx];
 				
-				// if the node has NOT yet visited, then add to the queue 
+                // if the node has NOT yet visited, then add to the queue 
                 if (!hasApple[nextIdx]){
                     hasApple[nextIdx] = true;
                     q.push(nextIdx);
