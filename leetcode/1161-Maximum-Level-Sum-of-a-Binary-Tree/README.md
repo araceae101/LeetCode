@@ -45,7 +45,7 @@ So we return the level with the maximum sum which is level 2.
 // Solution: Recursion
 
 // Time Complexity: O(N)
-// Space Complexity: O(N)
+// Space Complexity: O(height(tree))
 
 // Performance:
 // Runtime: 224 ms, faster than 6.27% of C++ online submissions for Maximum Level Sum of a Binary Tree.
