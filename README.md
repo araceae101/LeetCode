@@ -4,6 +4,7 @@ Write some notes for myself and also share my solution for LeetCode problems
 \# | Title | Difficulty | Topics | Solution (C++) | Solution (GO)
 ---|---|---|---|---|---
 2 | Add Two Numbers | Medium | Recursion | [Solution](./leetcode/0002-Add-Two-Numbers) | 
+19 | Remove Nth Node From End of List | Medium | Two pointer | [Solution](./leetcode/19-Remove-Nth-Node-From-End-of-List) | 
 216 | Combination Sum III | Medium | Backtracking | [Solution](./leetcode/0216-Combination-Sum-III) | 
 542 | 01 Matrix | Medium | DP / BFS | [Solution](./leetcode/0542-01-Matrix) | [GO-Solution](./leetcode/0542-01-Matrix/go)
 1151 | Minimum-Swaps-to-Group-All-1s-Together | Medium | Sliding window | [Solution](./leetcode/1151-Minimum-Swaps-to-Group-All-1s-Together) | 
