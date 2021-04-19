@@ -49,7 +49,7 @@ Note that different sequences are counted as different combinations.
 - Idea: 
     - Check the combination count starting from target number `1` to `target`.
     - For each target number, check every nums if it can be a member.
-    [Schematic diagram](./0377-example.png)
+![Schematic diagram](./0377-example.png)
 - Time Complexity: O(N*target)
 - Space Complexity: O(target)
 
