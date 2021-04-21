@@ -1,5 +1,5 @@
 # LeetCode
-Write some notes for myself and also share my solution for LeetCode problems
+Write some notes for myself and also share my solution in C++ and GO for LeetCode problems
 
 \# | Title | Difficulty | Topics | Solution (C++) | Solution (GO)
 ---|---|---|---|---|---
@@ -12,5 +12,6 @@ Write some notes for myself and also share my solution for LeetCode problems
 1151 | Minimum-Swaps-to-Group-All-1s-Together | Medium | Sliding window | [Solution](./leetcode/1151-Minimum-Swaps-to-Group-All-1s-Together) | 
 1161 | Maximum Level Sum of a Binary Tree | Medium | Recursion / BFS | [Solution](./leetcode/1161-Maximum-Level-Sum-of-a-Binary-Tree) | 
 1443 | Minimum Time to Collect All Apples in a Tree | Medium | BFS | [Solution](./leetcode/1443-Minimum-Time-to-Collect-All-Apples-in-a-Tree) | [GO-Solution](./leetcode/1443-Minimum-Time-to-Collect-All-Apples-in-a-Tree/go)
+1609 | Even Odd Tree | Medium | DFS / BFS | [Solution](./leetcode/1609-Even-Odd-Tree) | 
 1820 | Maximum Number of Accepted Invitations | Medium | Graph | [Solution](./leetcode/1820-Maximum-Number-of-Accepted-Invitations) | [GO-Solution](./leetcode/1820-Maximum-Number-of-Accepted-Invitations/go/)
 1823 | Find the Winner of the Circular Game | Medium | Array / Math | [Solution](./leetcode/1823-Find-the-Winner-of-the-Circular-Game) | 
