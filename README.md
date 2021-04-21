@@ -5,6 +5,7 @@ Write some notes for myself and also share my solution for LeetCode problems
 ---|---|---|---|---|---
 2 | Add Two Numbers | Medium | Recursion | [Solution](./leetcode/0002-Add-Two-Numbers) | 
 19 | Remove Nth Node From End of List | Medium | Two pointer | [Solution](./leetcode/0019-Remove-Nth-Node-From-End-of-List) | 
+120 | Triangle | Medium | DP | [Solution](./leetcode/0120-Triangle) | 
 216 | Combination Sum III | Medium | Backtracking | [Solution](./leetcode/0216-Combination-Sum-III) | 
 377 | Combination Sum IV | Medium | DP | [Solution](./leetcode/0377-Combination-Sum-IV) | [GO-Solution](./leetcode/0377-Combination-Sum-IV/go)
 542 | 01 Matrix | Medium | DP / BFS | [Solution](./leetcode/0542-01-Matrix) | [GO-Solution](./leetcode/0542-01-Matrix/go)
