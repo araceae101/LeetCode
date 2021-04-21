@@ -124,7 +124,7 @@ public:
 // Author: Araceae
 // Date: 2021/4/21
 
-// Solution: DFS + Recursive
+// Solution: BFS
 
 // Time Complexity: O(N), N is total nodes
 // Space Complexity: O(max(Nodes) in a level)
