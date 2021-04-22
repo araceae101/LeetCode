@@ -16,3 +16,4 @@ Write some notes for myself and also share my solution in C++ and GO for LeetCod
 1609 | Even Odd Tree | Medium | DFS / BFS | [Solution](./leetcode/1609-Even-Odd-Tree) | 
 1820 | Maximum Number of Accepted Invitations | Medium | Graph | [Solution](./leetcode/1820-Maximum-Number-of-Accepted-Invitations) | [GO-Solution](./leetcode/1820-Maximum-Number-of-Accepted-Invitations/go/)
 1823 | Find the Winner of the Circular Game | Medium | Array / Math | [Solution](./leetcode/1823-Find-the-Winner-of-the-Circular-Game) | 
+1836 | remove-duplicates-from-an-unsorted-linked-list | Medium | Linked List | [Solution](./leetcode/1836-remove-duplicates-from-an-unsorted-linked-list/) | 
