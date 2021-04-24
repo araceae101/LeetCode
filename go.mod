@@ -1,3 +1,3 @@
-module leetcode/1820-Maximum-Number-of-Accepted-Invitations/go
+module github.com/araceae101/LeetCode
 
 go 1.16

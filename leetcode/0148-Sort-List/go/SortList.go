@@ -1,5 +1,7 @@
 package leetcode
 
+import t "github.com/araceae101/LeetCode/pkg/unittest"
+
 // Problem: https://leetcode.com/problems/sort-list/
 // Author: Araceae
 // Date: 2021/4/24
@@ -9,14 +11,16 @@ package leetcode
 // Time Complexity: O(NlogN)
 // Space Complexity: O(1)
 
-// Definition for singly-linked list.
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
+/**
+ * Definition for singly-linked list.
+ * type ListNode struct {
+ *     Val int
+ *     Next *ListNode
+ * }
+ */
 
 // Problem: https://leetcode.com/problems/sort-list/
-func SortList(head *ListNode) *ListNode {
+func SortList(head *t.ListNode) *t.ListNode {
 	if head == nil || head.Next == nil {
 		return head
 	}
@@ -27,10 +31,10 @@ func SortList(head *ListNode) *ListNode {
 	return MergeSort(left, right)
 }
 
-func FindMid(head *ListNode) *ListNode {
+func FindMid(head *t.ListNode) *t.ListNode {
 	slow := head
 	fast := head
-	var prev *ListNode
+	var prev *t.ListNode
 	for fast != nil && fast.Next != nil {
 		prev = slow
 		slow = slow.Next
@@ -40,7 +44,7 @@ func FindMid(head *ListNode) *ListNode {
 	return slow
 }
 
-func MergeSort(left, right *ListNode) *ListNode {
+func MergeSort(left, right *t.ListNode) *t.ListNode {
 	if left == nil {
 		return right
 	}

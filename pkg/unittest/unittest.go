@@ -25,3 +25,15 @@ func Slice2ListNode(nums []int) *ListNode {
 
 	return res.Next
 }
+
+// Convert *ListNode into []int
+func ListNode2Slice(head *ListNode) []int {
+	var res []int
+
+	for head != nil {
+		res = append(res, head.Val)
+		head = head.Next
+	}
+
+	return res
+}
