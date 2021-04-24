@@ -36,6 +36,7 @@
 
 ## My Solutions
 ### Solution 1: Merge Sort
+![MergeSortAlgo](./mergeSort.png)
 #### C++ Code
 ```cpp
 // Problem: https://leetcode.com/problems/sort-list/
