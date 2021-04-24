@@ -1,5 +1,5 @@
 # LeetCode
-Write some notes for myself and also share my solution in C++ and GO for LeetCode problems
+Share my solutions in C++ and GO for LeetCode problems
 
 \# | Title | Difficulty | Topics | Solution (C++) | Solution (GO)
 ---|---|---|---|---|---
