@@ -19,3 +19,4 @@ I note the problems which I think they are very classic and need to practice rep
 1820 | Maximum Number of Accepted Invitations | Medium | Graph | [Solution](./leetcode/1820-Maximum-Number-of-Accepted-Invitations) | [GO-Solution](./leetcode/1820-Maximum-Number-of-Accepted-Invitations/go/)
 1823 | Find the Winner of the Circular Game | Medium | Array / Math | [Solution](./leetcode/1823-Find-the-Winner-of-the-Circular-Game) | 
 1836 | remove-duplicates-from-an-unsorted-linked-list | Medium | Linked List | [Solution](./leetcode/1836-remove-duplicates-from-an-unsorted-linked-list/) | 
+1840 | Maximum Building Height | Hard | Greedy | [Solution](./leetcode/1840-Maximum-Building-Height) | [GO-Solution](./leetcode/1840-Maximum-Building-Height/go/)
