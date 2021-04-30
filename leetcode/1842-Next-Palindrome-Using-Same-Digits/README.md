@@ -52,7 +52,7 @@ public:
     string nextPalindrome(string num) {
         int n = num.size();
 		
-		// find the index k, l and swap them to get the next permutaion
+        // find the index k, l and swap them to get the next permutaion
         int k;
         for (k = n/2 - 2; k >= 0; --k)
             if (num[k] < num[k+1]) break;
@@ -66,7 +66,7 @@ public:
         swap(num[k], num[l]);
         reverse(num.begin() + k+1, num.begin() + n/2);
         
-		// generate the data for remaining half 
+        // generate the data for remaining half 
         for (int i = 0; i < n/2; ++i)
              num[num.size()-1-i] = num[i];
         
