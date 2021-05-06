@@ -42,7 +42,7 @@
 <p>&nbsp;</p>
 
 ## My Solutions
-### Solution 1 : Binary Search and use extra space
+### Solution 1 : Binary Search (DFS) and use extra space
 1. Convert the listNode to vector.
 1. Recursively find the mid of the element in the vector and add to the tree node.
 
@@ -91,7 +91,7 @@ public:
 ```
 
 
-### Solution 1 : Binary Search and no extra space used
+### Solution 2 : Binary Search (DFS) and no extra space used
 - Time Complexity: O(N)
 - Space Complexity: O(1)
 #### C++ Code:
