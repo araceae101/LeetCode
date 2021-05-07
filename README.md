@@ -13,6 +13,7 @@ I note the problems which I think they are very classic and need to practice rep
 216 | Combination Sum III | Medium | Backtracking | [Solution](./leetcode/0216-Combination-Sum-III) | 
 377 | Combination Sum IV | Medium | DP | [Solution](./leetcode/0377-Combination-Sum-IV) | [GO-Solution](./leetcode/0377-Combination-Sum-IV/go)
 542 | 01 Matrix | Medium | DP / BFS | [Solution](./leetcode/0542-01-Matrix) | [GO-Solution](./leetcode/0542-01-Matrix/go)
+583 | Delete Operation for Two Strings | Medium | DP | [Solution](./leetcode/0583-Delete-Operation-for-Two-Strings) | 
 669 | Trim a Binary Search Tree | Medium | Recursion | [Solution](./leetcode/0669-Trim-a-Binary-Search-Tree) | 
 1151 | Minimum-Swaps-to-Group-All-1s-Together | Medium | Sliding window | [Solution](./leetcode/1151-Minimum-Swaps-to-Group-All-1s-Together) | 
 1161 | Maximum Level Sum of a Binary Tree | Medium | Recursion / BFS | [Solution](./leetcode/1161-Maximum-Level-Sum-of-a-Binary-Tree) | 
