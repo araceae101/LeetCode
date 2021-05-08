@@ -25,3 +25,4 @@ I note the problems which I think they are very classic and need to practice rep
 1836 | remove-duplicates-from-an-unsorted-linked-list | Medium | Linked List | [Solution](./leetcode/1836-remove-duplicates-from-an-unsorted-linked-list/) | 
 1840 | Maximum Building Height | Hard | Greedy | [Solution](./leetcode/1840-Maximum-Building-Height) | [GO-Solution](./leetcode/1840-Maximum-Building-Height/go/)
 1842 | Next Palindrome Using Same Digits | Hard | Greedy | [Solution](./leetcode/1842-Next-Palindrome-Using-Same-Digits) | 
+1852 | Distinct Numbers in Each Subarray | Medium | Sliding Window | [Solution](./leetcode/1852-Distinct-Numbers-in-Each-Subarray) |  
