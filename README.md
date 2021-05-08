@@ -15,6 +15,7 @@ I note the problems which I think they are very classic and need to practice rep
 542 | 01 Matrix | Medium | DP / BFS | [Solution](./leetcode/0542-01-Matrix) | [GO-Solution](./leetcode/0542-01-Matrix/go)
 583 | Delete Operation for Two Strings | Medium | DP | [Solution](./leetcode/0583-Delete-Operation-for-Two-Strings) | 
 669 | Trim a Binary Search Tree | Medium | Recursion | [Solution](./leetcode/0669-Trim-a-Binary-Search-Tree) | 
+906 | Super Palindromes | Hard | Math | [Solution](./leetcode/0906-Super-Palindromes) | 
 1151 | Minimum-Swaps-to-Group-All-1s-Together | Medium | Sliding window | [Solution](./leetcode/1151-Minimum-Swaps-to-Group-All-1s-Together) | 
 1161 | Maximum Level Sum of a Binary Tree | Medium | Recursion / BFS | [Solution](./leetcode/1161-Maximum-Level-Sum-of-a-Binary-Tree) | 
 1443 | Minimum Time to Collect All Apples in a Tree | Medium | BFS | [Solution](./leetcode/1443-Minimum-Time-to-Collect-All-Apples-in-a-Tree) | [GO-Solution](./leetcode/1443-Minimum-Time-to-Collect-All-Apples-in-a-Tree/go)
