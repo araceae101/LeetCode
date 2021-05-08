@@ -1,4 +1,4 @@
-[1852. Distinct Numbers in Each Subarray](https://leetcode.com/problems/distinct-numbers-in-each-subarray/)
+# [1852. Distinct Numbers in Each Subarray](https://leetcode.com/problems/distinct-numbers-in-each-subarray/)
 
 <div><p>Given an integer array <code>nums</code> and an integer <code>k</code>, you are asked to construct the array <code>ans</code> of size <code>n-k+1</code> where <code>ans[i]</code> is the number of <strong>distinct</strong> numbers in the subarray <code>nums[i:i+k-1] = [nums[i], nums[i+1], ..., nums[i+k-1]]</code>.</p>
 
@@ -50,12 +50,12 @@ public:
         unordered_map<int, int> m;
         vector<int> res(nums.size()-k+1, 0);
         
-		// firstly to count the number of element in the first sliding window
+        // firstly to count the number of element in the first sliding window
         for (int i = 0; i < k; ++i) m[nums[i]]++;
         res[0] = m.size();
         
-		// move the sliding window to right one by one
-		// remove the leftmost element and add the rightmost element in the hash table
+        // move the sliding window to right one by one
+        // remove the leftmost element and add the rightmost element in the hash table
         for (int i = 1; i < res.size(); ++i) {
             res[i] = res[i-1];
             int left = i-1, right = i-1+k;
