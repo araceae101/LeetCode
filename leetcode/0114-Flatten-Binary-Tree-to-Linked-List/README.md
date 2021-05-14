@@ -37,6 +37,7 @@
 <strong>Follow up:</strong> Can you flatten the tree in-place (with <code>O(1)</code> extra space)?</div>
 
 <p>&nbsp;</p>
+
 ## My Solutions
 ### Solution 1: DFS
 Traverse the tree from top to down and check if there is the subtree connected to its left-side. 
