@@ -8,8 +8,8 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
-// Slice2TresNode Converts []int int into *TreeNode
-func Slice2TresNode(nums []int) *TreeNode {
+// Slice2TreeNode Converts []int int into *TreeNode
+func Slice2TreeNode(nums []int) *TreeNode {
 	l := len(nums)
 	if l == 0 {
 		return nil
@@ -19,8 +19,9 @@ func Slice2TresNode(nums []int) *TreeNode {
 
 	ch := make(chan *TreeNode, len(nums))
 	ch <- root
+	nums = nums[1:]
 
-	for i := 1; i < len(nums); i++ {
+	for i := 0; i < len(nums); i++ {
 		tree := <-ch
 		// build left tree
 		if i < len(nums) && nums[i] == -1 {
@@ -33,7 +34,7 @@ func Slice2TresNode(nums []int) *TreeNode {
 		}
 		i++
 		// build right tree
-		if i < len(nums) || nums[i] == -1 {
+		if i < len(nums) && nums[i] == -1 {
 			tree.Right = nil
 		} else if i < len(nums) {
 			tree.Right = &TreeNode{

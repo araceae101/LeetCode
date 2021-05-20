@@ -29,7 +29,7 @@ type myNode struct {
 // Problem: https://leetcode.com/problems/binary-tree-vertical-order-traversal/
 func VerticalOrder(root *unittest.TreeNode) [][]int {
 	if root == nil {
-		return nil
+		return [][]int{}
 	}
 	r := new(myNode)
 	r.Node = root
