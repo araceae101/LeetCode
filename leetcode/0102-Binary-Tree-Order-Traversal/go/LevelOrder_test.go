@@ -17,8 +17,8 @@ func TestLevelOrder(t *testing.T) {
 		want [][]int
 	}{
 		{name: "Example-1", args: args{unittest.Slice2TresNode([]int{3, 9, 20, -1, -1, 15, 7})}, want: [][]int{{3}, {9, 20}, {15, 7}}},
-		{name: "Example-1", args: args{unittest.Slice2TresNode([]int{1})}, want: [][]int{{1}}},
-		{name: "Example-1", args: args{unittest.Slice2TresNode([]int{})}, want: [][]int{}},
+		{name: "Example-2", args: args{unittest.Slice2TresNode([]int{1})}, want: [][]int{{1}}},
+		{name: "Example-3", args: args{unittest.Slice2TresNode([]int{})}, want: [][]int{}},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
