@@ -25,7 +25,7 @@ func Slice2TresNode(nums []int) *TreeNode {
 		// build left tree
 		if i < len(nums) && nums[i] == -1 {
 			tree.Left = nil
-		} else {
+		} else if i < len(nums) {
 			tree.Left = &TreeNode{
 				Val: nums[i],
 			}
@@ -35,7 +35,7 @@ func Slice2TresNode(nums []int) *TreeNode {
 		// build right tree
 		if i < len(nums) || nums[i] == -1 {
 			tree.Right = nil
-		} else {
+		} else if i < len(nums) {
 			tree.Right = &TreeNode{
 				Val: nums[i],
 			}
