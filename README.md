@@ -7,6 +7,7 @@ I note the problems which I think they are very classic and need to practice rep
 2 | Add Two Numbers | Medium | Recursion | [Solution](./leetcode/0002-Add-Two-Numbers) | 
 19 | Remove Nth Node From End of List | Medium | Two pointer | [Solution](./leetcode/0019-Remove-Nth-Node-From-End-of-List) | 
 45 | Jump Gamp II | Medium | DP / Greedy | [Solution](./leetcode/0045-Jump-Gamp-II) | 
+51 | N-Queens | Medium | DFS | [Solution](./leetcode/0051-N-Queens) | 
 109 | Convert Sorted List to Binary Search Tree | Medium | BST / DFS | [Solution](./leetcode/0109-Convert-Sorted-List-to-Binary-Search-Tree) | 
 114 | Flatten Binary Tree to Linked List | Medium | DFS | [Solution](./leetcode/0114-Flatten-Binary-Tree-to-Linked-List) | 
 102 | Binary Tree Level Order Traversal | Medium | DFS / BFS / Tree | [Solution](./leetcode/0102-Binary-Tree-Order-Traversal) | [GO-Solution](./leetcode/0102-Binary-Tree-Order-Traversal/go)
