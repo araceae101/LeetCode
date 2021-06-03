@@ -17,7 +17,7 @@ package leetcode
 
 import "sort"
 
-const modulo = 1<<9 + 7
+const modulo = 1000000007
 
 // Problem: https://leetcode.com/problems/maximum-area-of-a-piece-of-cake-after-horizontal-and-vertical-cuts/
 func MaxArea(h int, w int, horizontalCuts []int, verticalCuts []int) int {
